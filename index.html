@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game of Life</title>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+    <script src="client.js"></script>
+</head>
+
+<body>
+        <!-- id="grass" -->
+    <button onclick="addGrass()">Grass</button>
+    <!-- id="grasseater" -->
+    <button onclick="addGrassEater()">GrassEater</button>
+    <!-- id="predator" -->
+    <button onclick="addPredator()">Predator</button>
+    <button onclick="addHunter()">Hunter</button>
+    <button onclick="addLightning()">Lightning</button>
+    <h4>Կանաչ - խոտ, տեսնում է իր շրջակա 8 վանդակները, բազմանում</h4>
+    <h4>Դեղին - խոտակեր, տեսնում է իր շրջակա 8 վանդակները, ապրում խոտեր ուտելով</h4>
+    <h4>Կարմիր - գիշատիչ, ուտում է խոտակերներին</h4>
+    <h4>Մարմնագույն - որսորդ, ապրում է գիշատիչներ ուտելով, մահանում, երբ մոտակա վանդակներում չկա գիշատիչ</h4>
+    <h4>Կապույտ - կայծակ, ուտում է որսորդներին, մահանում, երբ մոտակայքում որսորդ չկա</h4>
+   
+        
+
+        <!-- grassButton.addEventListener("click", () => {
+            for (let i = 0; i < 10; i++) {
+                const y = getRndInteger(0, matrix.length - 1);
+                const x = getRndInteger(0, matrix[0].length - 1);
+                if (matrix[y][x] == 0) {
+                    grassArr.push(new Grass(x, y));
+                    matrix[y][x] = 1;
+                }
+
+            }
+        }) -->
+
+        <!-- grassEaterButton.addEventListener("click", () => {
+            for (let i = 0; i < 8; i++) {
+                const y = getRndInteger(0, matrix.length - 1);
+                const x = getRndInteger(0, matrix[0].length - 1);
+                if (matrix[y][x] == 0) {
+                    grassEaterArr.push(new GrassEater(x, y));
+                    matrix[y][x] = 2;
+                }
+
+            }
+        }) -->
+<!-- 
+        predatorButton.addEventListener("click", () => {
+            for (let i = 0; i < 6; i++) {
+                const y = getRndInteger(0, matrix.length - 1);
+                const x = getRndInteger(0, matrix[0].length - 1);
+                if (matrix[y][x] == 0) {
+                    predatorArr.push(new Predator(x, y));
+                    matrix[y][x] = 3;
+                }
+
+            }
+        }) -->
+
+        <!-- hunterButton.addEventListener("click", () => {
+            for (let i = 0; i < 4; i++) {
+                const y = getRndInteger(0, matrix.length - 1);
+                const x = getRndInteger(0, matrix[0].length - 1);
+                if (matrix[y][x] == 0) {
+                    hunterArr.push(new Hunter(x, y));
+                    matrix[y][x] = 4;
+                }
+
+            } -->
+        <!-- }) -->
+
+        <!-- lightningButton.addEventListener("click", () => {
+            for (let i = 0; i < 2; i++) {
+                const y = getRndInteger(0, matrix.length - 1);
+                const x = getRndInteger(0, matrix[0].length - 1);
+                if (matrix[y][x] == 0) {
+                    lightningArr.push(new Lightning(x, y));
+                    matrix[y][x] = 5;
+                }
+
+            }
+        })
+
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        } -->
+    
+</body>
+
+</html>
